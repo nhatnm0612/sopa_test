@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sopa_task_view_form_inherit_sopa_test_q2" model="ir.ui.view">
+        <field name="name">sopa.task.view.form.inherit</field>
+        <field name="model">sopa.task</field>
+        <field name="inherit_id" ref="sopa_test_q1.sopa_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <field name="status" widget="statusbar" />
+                </header>
+            </xpath>
+            <xpath expr="//group[@name='other_details']" position="inside">
+                <field name="working_status" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

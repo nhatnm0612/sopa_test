@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sopa_task_view_tree" model="ir.ui.view">
+        <field name="name">sopa.task.view.tree</field>
+        <field name="model">sopa.task</field>
+        <field name="arch" type="xml">
+            <tree string="SoPa Tasks" create="0">
+                <field name="name" />
+                <field name="user_id" />
+                <field name="start_date" />
+                <field name="due_date" />
+                <field name="project_id" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sopa_task_view_form" model="ir.ui.view">
+        <field name="name">sopa.task.view.form</field>
+        <field name="model">sopa.task</field>
+        <field name="arch" type="xml">
+            <form string="SoPa Task">
+                <sheet>
+                    <h1>
+                        <label for="name" class="oe_edit_only" />
+                        <field name="name" />
+                    </h1>
+                    <group>
+                        <group name="duration" string="Task Duration">
+                            <field name="start_date" />
+                            <field name="due_date" />
+                        </group>
+                        <group name="other_details" string="Other Details">
+                            <field name="user_id" />
+                            <field name="project_id" readonly="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sopa_task_view_kanban" model="ir.ui.view">
+        <field name="name">sopa.task.view.kanban</field>
+        <field name="model">sopa.task</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <b>Task Name: </b> <span><t t-esc="record.name.value" /></span>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="sopa_task_action" model="ir.actions.act_window">
+        <field name="name">SoPa Tasks</field>
+        <field name="res_model">sopa.task</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

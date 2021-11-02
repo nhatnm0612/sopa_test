@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Demo Partner -->
+    <record id="sopa_partner_1" model="res.partner">
+        <field name="name">SoPa Demo 1</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="sopa_partner_2" model="res.partner">
+        <field name="name">SoPa Demo 2</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="sopa_partner_3" model="res.partner">
+        <field name="name">SoPa Demo 3</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="sopa_partner_4" model="res.partner">
+        <field name="name">SoPa Demo 4</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="sopa_partner_5" model="res.partner">
+        <field name="name">SoPa Demo 5</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <!-- Demo User -->
+    <record id="sopa_user_1" model="res.users">
+        <field name="partner_id" ref="sopa_test_q1.sopa_partner_1" />
+        <field name="login">1</field>
+        <field name="password">1</field>
+    </record>
+    <record id="sopa_user_2" model="res.users">
+        <field name="partner_id" ref="sopa_test_q1.sopa_partner_2" />
+        <field name="login">2</field>
+        <field name="password">2</field>
+    </record>
+    <record id="sopa_user_3" model="res.users">
+        <field name="partner_id" ref="sopa_test_q1.sopa_partner_3" />
+        <field name="login">3</field>
+        <field name="password">3</field>
+    </record>
+    <record id="sopa_user_4" model="res.users">
+        <field name="partner_id" ref="sopa_test_q1.sopa_partner_4" />
+        <field name="login">4</field>
+        <field name="password">4</field>
+    </record>
+    <record id="sopa_user_5" model="res.users">
+        <field name="partner_id" ref="sopa_test_q1.sopa_partner_5" />
+        <field name="login">5</field>
+        <field name="password">5</field>
+    </record>
+
+    <!-- Demo SoPa Projects -->
+    <record id="sopa_project_1" model="sopa.project">
+        <field name="name">Sopa Project 1</field>
+        <field name="manager_user_id" ref="base.user_admin" />
+    </record>
+    <record id="sopa_project_2" model="sopa.project">
+        <field name="name">Sopa Project 2</field>
+        <field name="manager_user_id" ref="base.user_admin" />
+    </record>
+    <record id="sopa_project_3" model="sopa.project">
+        <field name="name">Sopa Project 3</field>
+        <field name="manager_user_id" ref="base.user_admin" />
+    </record>
+    <record id="sopa_project_4" model="sopa.project">
+        <field name="name">Sopa Project 4</field>
+        <field name="manager_user_id" ref="base.user_admin" />
+    </record>
+    <record id="sopa_project_5" model="sopa.project">
+        <field name="name">Sopa Project 5</field>
+        <field name="manager_user_id" ref="base.user_admin" />
+    </record>
+
+    <!-- Demo SoPa Tasks -->
+    <record id="sopa_task_1" model="sopa.task">
+        <field name="name">Task 1</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_1" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_1" />
+    </record>
+    <record id="sopa_task_2" model="sopa.task">
+        <field name="name">Task 2</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_1" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_1" />
+    </record>
+    <record id="sopa_task_3" model="sopa.task">
+        <field name="name">Task 1</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_2" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_2" />
+    </record>
+    <record id="sopa_task_4" model="sopa.task">
+        <field name="name">Task 2</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_2" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_2" />
+    </record>
+    <record id="sopa_task_5" model="sopa.task">
+        <field name="name">Task 1</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_3" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_3" />
+    </record>
+    <record id="sopa_task_6" model="sopa.task">
+        <field name="name">Task 2</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_3" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_3" />
+    </record>
+    <record id="sopa_task_7" model="sopa.task">
+        <field name="name">Task 1</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_4" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_4" />
+    </record>
+    <record id="sopa_task_8" model="sopa.task">
+        <field name="name">Task 2</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_4" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_4" />
+    </record>
+    <record id="sopa_task_9" model="sopa.task">
+        <field name="name">Task 1</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_5" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_5" />
+    </record>
+    <record id="sopa_task_10" model="sopa.task">
+        <field name="name">Task 2</field>
+        <field name="project_id" ref="sopa_test_q1.sopa_project_5" />
+        <field name="user_id" ref="sopa_test_q1.sopa_user_5" />
+    </record>
+
+</odoo>

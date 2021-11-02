@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="sopa_root_menu"
+        name="SoPa"
+        sequence="10"/>
+
+    <menuitem
+        id="sopa_project_menu"
+        name="SoPa Projects"
+        action="sopa_test_q1.sopa_project_action"
+        parent="sopa_test_q1.sopa_root_menu"
+        sequence="10"/>
+
+    <menuitem
+        id="sopa_task_menu"
+        name="SoPa Tasks"
+        action="sopa_test_q1.sopa_task_action"
+        parent="sopa_test_q1.sopa_root_menu"
+        sequence="20"/>
+
+</odoo>
